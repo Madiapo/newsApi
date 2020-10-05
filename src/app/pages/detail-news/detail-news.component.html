@@ -1,0 +1,28 @@
+<div class="content">
+
+   <div class="head-top">
+       <h3>Headlines in details</h3>
+   </div>
+  <!-- {{details|json}} -->
+  
+  
+  
+  <div *ngFor="let property of details">
+        <div class="container">
+            <!-- <div class="card"[routerLink]="['/newsdetails',property.author] "routerLinkActivate="routerLinkActivate"> -->
+            <p><strong>Author:{{property.author}}</strong></p>
+            <p>Tittle:{{property.title}}</p>
+            <p>Content:{{property.content}}</p>
+            <p>publishedAt:{{publishedAt}}</p>
+
+            <div class="card-url" [routerLink]="['/articles',property.url] " routerLinkActivate="routerLinkActivate">
+                <p>more info:{{property.url}}</p>
+  
+                <div class="card-img">
+                  <img [src]="property.urlToImage">
+               </div>
+
+           </div>
+
+        </div>
+

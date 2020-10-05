@@ -1,0 +1,22 @@
+<content>
+<H2>TOP HEADLINES OF TECH CRUNCH</H2>
+    <div *ngFor="let property of details">
+       <div class="card"[routerLink]="['/detail-news',property.author] "routerLinkActivate="routerLinkActivate">
+
+          <div class="card-info">
+              <strong><h3>Author :{{property.author}}</h3><br>
+              <p>Tittle:{{property.title}}</p>
+              <p>Description:{{property.description}}</p>
+              <button>click here for more info</button></strong>
+          </div>
+        
+
+        <div class="card-img">
+            <img [src]="property.urlToImage">
+
+        </div>
+       
+
+       </div>
+      
+    </div>
